@@ -151,82 +151,28 @@
 </nav>
 
         <div id="main">
-            <div class="post_page_title_img" style="height: 25rem;background-image: url(http://222.186.12.239:10010/aqingchunmei_20181113/001.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Linux指令</h2></a>
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(http://vpic.video.qq.com/123/z0016p7fv5s.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Hexo博客搭建</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>Linux指令系统：</p>
-<p>命令名称 [命名参数] [命令对象]</p>
-<p>一、日常操作</p>
-<p>1.cd指令       - 进入指定文件夹</p>
-<p>cd  目录     - 进入指定目录(也可以是文件夹对应的路径)</p>
-<p>​               ~相对路径 — 绝对路径</p>
-<p>cd  ..       - 返回上层目录</p>
-<p>cd  ~    - 回到根目录</p>
-<p>\2. ls指令        - 查看当前目录中的内容</p>
-<p>ls</p>
-<p>ls  -l/-lh</p>
-<p>ls -a               - 隐藏文件也一起显示</p>
-<p>ls -R            - 递归显示所有内容</p>
-<p>ls -S/-t            - 按大小/时间排序</p>
-<p>3.pwd指令         - 显示当前完整目录</p>
-<p>pwd</p>
-<p>4.文件操作指令</p>
-<p>touch  文件名        - 新建文件</p>
-<p>cat 文件名           - 查看文件内容</p>
-<p>rm    文件名        - 删除文件</p>
-<p>rm - r 目录        - 删除文件夹</p>
-<p>cp  文件名1  文件名2    - 将文件1中的内容拷贝到文件2中</p>
-<p>cp -r  文件名/目录名   目录2    - 将文件/目录拷贝到目录2中</p>
-<p>mv    文件名1  文件名2    - 将文件1中的内容移动到文件2中 ,并且删除文件1（文件重命名）</p>
-<p>mv    文件名1  文件目录    - 将文件1移动到指定目录中  </p>
-<p>(注意：cp/mv/rm 后面可以跟： -i询问  -f强制  -n不覆盖)</p>
-<p>mkdir  目录名        - 新建文件夹</p>
-<p>mkdir -p a/b/c        - 按层级创建a,b,c三个文件夹</p>
-<p>mkdir -p a/{b,c}/{d,e,f}    -同一层级常见多个</p>
-<p>rmdir  目录名        - 删除指定空目录</p>
-<p>7.history        - 显示历史指令记录</p>
-<p>bashrc 配置显示时间：export  HISTTIMEFORMAT=”[%y‐%m‐%d_%T] “ </p>
-<p>修改bashrc 后使其生效:  source ~/.bashrc  或 .  .bashrc   </p>
-<p>6.链接</p>
-<p>ln -s 源路径  目标路径        - 给源路径对应的文件在目标路径下创建一个软链接(可以看成是快捷键)</p>
-<p>ln 源路径  目标路径            - 给源路径对应的文件在目标路径下创建一个硬链接</p>
-<p>8.快捷键</p>
-<p>ctr + f         - 前进一个字符</p>
-<p>ctr + b        - 后退一个字符</p>
-<p>ctr + a        - 回到行首</p>
-<p>ctr + e         - 回到行尾</p>
-<p>ctr + w        - 向左删除一个单词</p>
-<p>ctr + u        - 向左删除全部</p>
-<p>ctr + k        - 向右删除全部</p>
-<p>ctr + y        - 粘贴上次删除的内容</p>
-<p>ctr + l        - 清屏  </p>
-<p>二、进程相关指令</p>
-<p>1.ps指令</p>
-<p>ps                        - 进程状态</p>
-<p>ps -aux  或者  ps ex            - 查看进程</p>
-<p>ps -aux|grep 进程名        - 查看指定进程</p>
-<p>psgrep  进程名</p>
-<p><a href="http://2.top" target="_blank" rel="noopener">2.top</a>指令</p>
-<p>top                         - 动态监控进程</p>
-<p>top  -p PID1,PID2,….        - 动态监控指定进程</p>
-<p>3.free指令</p>
-<p>free -单位                    - 以指定单位查看内存</p>
-<p>4.kill指令</p>
-<p>kill 进程号                    - 杀死指定的进程</p>
-<p>kill -1/-9/-15                - -1(HUP)不间断重启，-9(KILL)强制杀死进程,-15(TERM)正常终止进程  </p>
-<p>pkill  进程名                - 按名字处理进程</p>
-<p>killall 进程名                - 处理名字匹配的进程</p>
-<p>uptime                    - 查看系统状态</p>
-<p>三、权限管理</p>
-<p>1.user和group</p>
-<p>users                                     -查看当前用户</p>
-<p>groupadd  分组名                            - 添加分组</p>
-<p>useradd ‐G 分组列表 ‐m ‐s /bin/bash 用户名        - 创建一个用户添加到指定的分组中</p>
-<p>usermod -G 分组列表 用户名                    - 修改分组</p>
-<p>sudo                                        - 以管理员执行其他程序</p>
-<p>su - 用户名                                - 切换用户身份</p>
+                <p>###1. 搭建博客<br>使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js   </p>
+<ol>
+<li>首先在自己的电脑上创建一个空的文件夹’Hexo’  </li>
+<li>在gitbash中终端中通过<code>cd</code>指令进入到刚才创建的文件夹中   </li>
+<li>输入指令 <code>npm install -g hexo</code> 安装Hexo  </li>
+<li>输入指令 <code>hexo init</code> 进行初始化  </li>
+<li>依次输入指令<code>npm install</code> <code>hexo server</code> 启动服务器<br> 博客内容发生改变后可以通过<code>hexo clean</code> <code>hexo generate</code> <code>hexo deploy</code> <code>hexo server</code>刷新后重新启动    </li>
+</ol>
+<p>###2. 部署博客  </p>
+<ol>
+<li>在github上创建一个空的仓库，仓库名： <code>用户名.github.io</code>  </li>
+<li><p>修改博客本地仓库中的配置文件（Hexo目录下的_config.yml文件）,在文件末尾添加一下选中内容<br><img src="/Users/yuting/Desktop/Hexo/image1.png" alt>  </p>
+</li>
+<li><p>使用git部署, 输入指令<code>npm install hexo-deployer-git --save</code>  </p>
+</li>
+<li>输入指令<code>hexo clean</code> <code>hexo generate</code> <code>hexo deploy</code> 对博客进行提交</li>
+</ol>
 
             </div>
 
@@ -289,8 +235,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2019/02/20/Linux指令系统：/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://yoursite.com/2019/02/20/Linux指令系统：/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://yoursite.com/2018/06/27/Hexo博客搭建/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/06/27/Hexo博客搭建/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
