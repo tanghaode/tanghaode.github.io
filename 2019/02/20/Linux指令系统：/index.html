@@ -156,77 +156,87 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>Linux指令系统：</p>
-<p>命令名称 [命名参数] [命令对象]</p>
-<p>一、日常操作</p>
-<p>1.cd指令       - 进入指定文件夹</p>
-<p>cd  目录     - 进入指定目录(也可以是文件夹对应的路径)</p>
-<p>​               ~相对路径 — 绝对路径</p>
-<p>cd  ..       - 返回上层目录</p>
-<p>cd  ~    - 回到根目录</p>
-<p>\2. ls指令        - 查看当前目录中的内容</p>
-<p>ls</p>
-<p>ls  -l/-lh</p>
-<p>ls -a               - 隐藏文件也一起显示</p>
-<p>ls -R            - 递归显示所有内容</p>
-<p>ls -S/-t            - 按大小/时间排序</p>
-<p>3.pwd指令         - 显示当前完整目录</p>
-<p>pwd</p>
-<p>4.文件操作指令</p>
-<p>touch  文件名        - 新建文件</p>
-<p>cat 文件名           - 查看文件内容</p>
-<p>rm    文件名        - 删除文件</p>
-<p>rm - r 目录        - 删除文件夹</p>
-<p>cp  文件名1  文件名2    - 将文件1中的内容拷贝到文件2中</p>
-<p>cp -r  文件名/目录名   目录2    - 将文件/目录拷贝到目录2中</p>
-<p>mv    文件名1  文件名2    - 将文件1中的内容移动到文件2中 ,并且删除文件1（文件重命名）</p>
-<p>mv    文件名1  文件目录    - 将文件1移动到指定目录中  </p>
+                <p>连接云服务器：<br>1.连接服务器:    ssh  root@ip地址<br>2.退出:  logout</p>
+<p>Linux指令系统：</p>
+<p>命令名称 [命名参数][命令对象]</p>
+<p>一、日常操作<br>1.cd指令       - 进入指定文件夹<br>cd  目录     - 进入指定目录(也可以是文件夹对应的路径)<br>​               ~相对路径 — 绝对路径</p>
+<p>cd  ..       - 返回上层目录<br>cd  ~    - 回到根目录<br>cd  /    - 进入系统根目录</p>
+<ol>
+<li>ls指令        - 查看当前目录中的内容<br>ls<br>ls  -l/-lh              -  查看详情<br>ls -a               - 隐藏文件也一起显示<br>ls -R            - 递归显示所有内容<br>ls -S/-t            - 按大小/时间排序</li>
+</ol>
+<p>3.pwd指令         - 显示当前完整目录<br>pwd</p>
+<p>4.文件操作指令<br>touch  文件名        - 新建文件<br>cat 文件名           - 查看文件内容<br>vim/vi  文件名          -打开文件</p>
+<p>rm    文件名        - 删除文件<br>rm - r 目录        - 删除文件夹</p>
+<p>cp  文件名1  文件名2    - 将文件1中的内容拷贝到文件2中<br>cp  文件1路径   文件2路径<br>cp -r  文件名/目录名   目录2    - 将文件/目录拷贝到目录2中</p>
+<p>mv    文件名1  文件名2    - 将文件1中的内容移动到文件2中 ,并且删除文件1（文件重命名）<br>mv  文件1路径   文件2路径</p>
+<p>mv    文件名1  文件目录    - 将文件1移动到指定目录中<br>注意: mv指令不能加-r来操作目录</p>
 <p>(注意：cp/mv/rm 后面可以跟： -i询问  -f强制  -n不覆盖)</p>
-<p>mkdir  目录名        - 新建文件夹</p>
-<p>mkdir -p a/b/c        - 按层级创建a,b,c三个文件夹</p>
-<p>mkdir -p a/{b,c}/{d,e,f}    -同一层级常见多个</p>
+<p>mkdir  目录名        - 新建文件夹<br>mkdir -p a/b/c        - 按层级创建a,b,c三个文件夹<br>mkdir -p a/{b,c}/{d,e,f}    -同一层级常见多个</p>
 <p>rmdir  目录名        - 删除指定空目录</p>
-<p>7.history        - 显示历史指令记录</p>
-<p>bashrc 配置显示时间：export  HISTTIMEFORMAT=”[%y‐%m‐%d_%T] “ </p>
-<p>修改bashrc 后使其生效:  source ~/.bashrc  或 .  .bashrc   </p>
-<p>6.链接</p>
-<p>ln -s 源路径  目标路径        - 给源路径对应的文件在目标路径下创建一个软链接(可以看成是快捷键)</p>
-<p>ln 源路径  目标路径            - 给源路径对应的文件在目标路径下创建一个硬链接</p>
-<p>8.快捷键</p>
-<p>ctr + f         - 前进一个字符</p>
-<p>ctr + b        - 后退一个字符</p>
-<p>ctr + a        - 回到行首</p>
-<p>ctr + e         - 回到行尾</p>
-<p>ctr + w        - 向左删除一个单词</p>
-<p>ctr + u        - 向左删除全部</p>
-<p>ctr + k        - 向右删除全部</p>
-<p>ctr + y        - 粘贴上次删除的内容</p>
-<p>ctr + l        - 清屏  </p>
-<p>二、进程相关指令</p>
-<p>1.ps指令</p>
-<p>ps                        - 进程状态</p>
-<p>ps -aux  或者  ps ex            - 查看进程</p>
-<p>ps -aux|grep 进程名        - 查看指定进程</p>
-<p>psgrep  进程名</p>
-<p><a href="http://2.top" target="_blank" rel="noopener">2.top</a>指令</p>
-<p>top                         - 动态监控进程</p>
-<p>top  -p PID1,PID2,….        - 动态监控指定进程</p>
-<p>3.free指令</p>
-<p>free -单位                    - 以指定单位查看内存</p>
+<p>7.history        - 显示历史指令记录<br>bashrc 配置显示时间：export  HISTTIMEFORMAT=”[%y‐%m‐%d_%T] “<br>修改bashrc 后使其生效:  source ~/.bashrc  或 .  .bashrc   </p>
+<p>6.链接<br>ln -s 源路径  目标路径        - 给源路径对应的文件在目标路径下创建一个软链接(可以看成是快捷键)(源路径是绝对路径) (掌握！)<br>ln 源路径  目标路径            - 给源路径对应的文件在目标路径下创建一个硬链接（了解）</p>
+<p>注意: 源文件不存在的时候，软件无效，硬链接变成普通文件</p>
+<p>8.快捷键<br>ctr + f         - 前进一个字符<br>ctr + b        - 后退一个字符<br>ctr + a        - 回到行首<br>ctr + e         - 回到行尾<br>ctr + w        - 向左删除一个单词<br>ctr + u        - 向左删除全部<br>ctr + k        - 向右删除全部<br>ctr + y        - 粘贴上次删除的内容<br>ctr + l        - 清屏  </p>
+<p>二、进程相关指令(用得较少)<br>1.ps指令<br>ps                        - 进程状态<br>ps -aux  或者  ps ex            - 查看进程<br>ps -aux|grep 进程名        - 查看指定进程<br>ps grep  进程ID</p>
+<p>2.top指令<br>top                         - 动态监控进程<br>top  -p PID1,PID2,….        - 动态监控指定进程</p>
+<p>3.free指令<br>free -单位                    - 以指定单位查看内存, 例如 free -m (以Mb为单位显示内存状况), -g,  -k等！</p>
 <p>4.kill指令</p>
-<p>kill 进程号                    - 杀死指定的进程</p>
-<p>kill -1/-9/-15                - -1(HUP)不间断重启，-9(KILL)强制杀死进程,-15(TERM)正常终止进程  </p>
-<p>pkill  进程名                - 按名字处理进程</p>
-<p>killall 进程名                - 处理名字匹配的进程</p>
+<p>kill 进程号                    - 杀死指定的进程<br>kill -1/-9/-15                - -1(HUP)不间断重启，-9(KILL)强制杀死进程,-15(TERM)正常终止进程<br>pkill  进程名                - 按名字处理进程<br>killall 进程名                - 处理名字匹配的进程</p>
 <p>uptime                    - 查看系统状态</p>
-<p>三、权限管理</p>
-<p>1.user和group</p>
-<p>users                                     -查看当前用户</p>
+<p>三、权限管理<br>1.user和group : 一个系统可以有多个用户和多个分组； 一个分组中可以有多个用户，一个用户在不同的分组中(多对多)</p>
+<p>users                                     - 查看当前用户<br>groups                                 - 查看当前分组</p>
 <p>groupadd  分组名                            - 添加分组</p>
-<p>useradd ‐G 分组列表 ‐m ‐s /bin/bash 用户名        - 创建一个用户添加到指定的分组中</p>
+<p>useradd ‐G 分组列表 ‐m ‐s /bin/bash 用户名        - 创建一个用户添加到指定的分组中(在home创建相应的文件夹)</p>
 <p>usermod -G 分组列表 用户名                    - 修改分组</p>
-<p>sudo                                        - 以管理员执行其他程序</p>
-<p>su - 用户名                                - 切换用户身份</p>
+<p>passwd 用户名                            - 修改密码</p>
+<p>su  用户名                                - 切换用户身份</p>
+<p>sudo                                        - 以管理员执行其他程序<br>注意： a.在ubuntu需要将用户添加到sudo分组中，才能使用sudo以管理员的身份执行程序<br>​          b.在centOS中需要先执行vi 指令进入sudoers文件中在指定的位置添加内容<br>​        ## Allow root to run any commands anywhere<br>​        root    ALL=(ALL)       ALL<br>​        xiaoming ALL=(ALL)      ALL        (自己添加的，xiaoming是用户名)</p>
+<p>2.chmod<br>chmod       权限值   文件            - 修改指定文件的权限</p>
+<p>chmod    [a,u,g,o][+,-][r,w,x]  文件            - 为指定文件，给所有用户添加相应的权限<br>​                                              (a:所有，u:自己，g:同组，o:其他；<br>​                                            +：添加， -: 取消；<br>​                                            r:读，w:写，x:执行)<br>chown  用户名     文件            - 改变文件所有者</p>
+<p>￼</p>
+<p>(权限制是三组二进制值)<br>self      group    other<br>rwx      rwx        rwx<br>111       101        001            - 自己读写可执行，同一分组的只读可执行，其他的只可执行<br>110      100        000</p>
+<p>chmod  644  文件<br>chmod  777   文件<br>chmod 666    文件</p>
+<p>三、日志管理<br>1.cat指令<br>cat       文件                - 查看文件内容</p>
+<p>2.查看部分<br>head -n  N  文件        - 查看前N行内容<br>tail  -n  N    文件         - 查看后N行内容</p>
+<p>3.<br>less [-N]  文件<br>​    - 按 j 向下<br>​    - 按 k 向上<br>​    - 按 f 向下翻屏<br>​    - 按    b 向上翻屏<br>​    - 按 g 到全文开头<br>​    - 按 G 到全文结尾<br>​    - 按 Q 退出  </p>
+<p>more [-N]  文件            - 和less差不多，这个是尽可能多，less是尽可能少的加载</p>
+<p>4.处理<br>sort                  - 排序  (cat 文件 |sort)<br>uniq                - 去重  (cat 文件 |uniq) - 只会去重相邻的重复是数据，一般结合sort一起使用:  |sort|uniq<br>awk ‘{print $N}’    - 打印第N列的内容(netstat -natp|awk ‘{print $4}’)</p>
+<p>history |awk ‘{print $4}’ |sort |uniq ‐c | sort ‐rnk 1 | head ‐n 3           -获取历史指令中，使用最频繁的三个指令</p>
+<p>5.重定向<br>执行获取数据的指令  &gt; 文件  （将执行指定的结果存储到文件中 - 覆盖原文件中内容）<br>执行获取数据的指令 &gt;&gt; 文件   (将执行指定的结果存储到文件中 - 在原文件的最后追加)</p>
+<p>5.统计<br>wc -c(字符)/-w(单词)/-l(行)  文件</p>
+<p>6.查找<br>grep  查看对象    目录/文件  参数<br>​    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">参数：</span><br><span class="line">	-i	忽略大小写:         grep you bb.txt   -i</span><br><span class="line">	-n   显示行标号：      grep you bb.txt -n   /   grep you bb.txt -i -n</span><br><span class="line">	-E   通过正则表达式匹配:     grep -E  ‘正则表达式’  文件</span><br><span class="line">	注意： Linux中，正则不支持: \d, \s,\w,\b,\D,\S,\W,\B</span><br><span class="line">                                       支持：.   +, *, ?, &#123;N,M&#125;, [], ^, $</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-v   忽略字段:   grep you bb.txt -v  (在bb.txt中找不包含you的所有行)</span><br><span class="line">				grep -E &apos;[0-9]+\.[0-9]+&apos; abb.txt -v</span><br><span class="line"></span><br><span class="line">-rn  递归查找目录，并打印行号</span><br><span class="line">grep -r  you ./   (在当前文件夹下中所有文件中去找包行’you’的行)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">	—include=‘*.py’	仅包含 py文件: grep -r you ./ --include=&apos;*.txt&apos;</span><br><span class="line"></span><br><span class="line">	—exclude=‘*.js’	不包含 js 文件: grep -r you ./ --exclude=&apos;*.c&apos;</span><br><span class="line"></span><br><span class="line">例如：</span><br><span class="line">	grep you bb.txt  </span><br><span class="line">	grep you bb.txt -i</span><br><span class="line">	grep you bb.txt -i -n</span><br><span class="line">	grep -E &apos;[0-9]+&apos; bb.txt</span><br></pre></td></tr></table></figure>
+<p>find       DIR    -name  ‘<em>.xxx’        找到目录下所有名字匹配的文件:  find a1 -name ‘</em>.txt’(在文件夹a1中找所有txt文件)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例：find ./ -size +20k -size -100k -name &apos;*.txt&apos;   (找当前目录下大于20k并且小于100k的所有txt文件)</span><br></pre></td></tr></table></figure>
+<p>which  指令        - 精确查找当前可执行的指令<br>whereis  指令    - 查找所有匹配的命令</p>
+<p>四、网络管理</p>
+<p>ifconfig     查看网卡状态</p>
+<p>netstat   -natp                    - 查看网络连接状态<br>netstat   -natp|grep  端口号            - 查看指定端口的网络连接状态    </p>
+<p>ping  地址<br>ping  -i   时间    地址<br>ping  -c  次数    地址</p>
+<p>telnet  ip地址    端口         - 查看远程主机网络连接状况</p>
+<p>dig 地址            - 查看DNS</p>
+<p>** wget  地址            - 下载  </p>
+<p>五、使用包管理工具<br>包管理工具：yum </p>
+<ul>
+<li>yum search：搜索软件包，例如yum search nginx。</li>
+<li>yum list installed：列出已经安装的软件包，例如yum list installed | grep zlib。</li>
+<li>yum install：安装软件包，例如yum install nginx。</li>
+<li>yum remove：删除软件包，例如yum remove nginx。</li>
+<li>yum update：更新软件包，例如yum update可以更新所有软件包，而yum update tar只会更新tar。</li>
+<li>yum check-update：检查有哪些可以更新的软件包。</li>
+<li>yum info：显示软件包的相关信息，例如yum info nginx。</li>
+</ul>
+<p>源代码构建安装</p>
+<ol>
+<li>wget  安装包的路径        -下载安装包</li>
+<li>gunzip/tar  压缩包         - 解压、解归档</li>
+<li>(设置安装路径)</li>
+<li>cd 安装包目录 执行: make &amp;&amp; make install       -编译安装包程序</li>
+<li>给可执行文件添加软连接到usr/bin目录下            -添加快捷方式</li>
+</ol>
+<p>压缩/解压缩和归档/解归档 - gzip / gunzip / xz / tar</p>
 
             </div>
 
